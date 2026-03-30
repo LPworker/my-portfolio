@@ -1,12 +1,14 @@
 /* 全体 */
-* {
-  box-sizing: border-box; /* ←最重要（ズレ防止） */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  overflow-x: hidden; /* 横ズレ防止 */
+  overflow-x: hidden;
 }
 
 /* 各セクション */
@@ -50,21 +52,21 @@ section {
   margin-bottom: 15px;
 }
 
-/* フォーム全体 */
+/* フォーム */
 .contact form {
   max-width: 400px;
   margin: 0 auto;
 }
 
-/* 入力欄（ズレ完全対策済） */
+/* ←ここが今回の最重要ポイント */
 input,
 textarea {
-  width: 100%;
+  width: 95%;           /* ←100%じゃなく95%にする */
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px auto;    /* ←中央寄せ */
+  display: block;       /* ←中央寄せに必要 */
   border-radius: 5px;
   border: none;
-  box-sizing: border-box;
 }
 
 /* テキストエリア */
@@ -81,7 +83,7 @@ button {
   transition: 0.3s;
 }
 
-/* ボタン中央寄せ（地味に重要） */
+/* ボタン中央 */
 .contact button {
   display: block;
   margin: 20px auto 0;
