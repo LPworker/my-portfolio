@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- HTML宣言 -->
+<html lang="ja"> <!-- 日本語ページ -->
+
+<head> <!-- 設定 -->
+  <meta charset="UTF-8"> <!-- 文字コード -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホ対応 -->
+  <title>柴田｜LP制作ポートフォリオ</title> <!-- タイトル -->
+  <link rel="stylesheet" href="style.css"> <!-- CSS読み込み -->
+</head>
+
+<body> <!-- 表示開始 -->
+
+  <!-- ①キャッチコピー -->
+  <section class="hero fade"> <!-- 最上部 -->
+    <h1>LP制作・修正対応します</h1> <!-- 強み -->
+    <p>スピード対応・丁寧なコミュニケーション</p> <!-- 差別化 -->
+    <a href="#contact"><button>無料相談する</button></a> <!-- CTA -->
+  </section>
+
+  <!-- ②自己紹介 -->
+  <section class="about fade">
+    <h2>プロフィール</h2>
+    <div class="card">
+      <img src="profile.jpg" class="profile"> <!-- 自分の写真 -->
+      <p>
+        柴田 行洋です。<br>
+        製造業にて設計・技術営業を経験し、要件整理や顧客対応を得意としています。<br>
+        現在はWeb制作を中心に活動しています。
+      </p>
+    </div>
+  </section>
+
+  <!-- ③できること -->
+  <section class="service fade">
+    <h2>対応可能業務</h2>
+    <div class="card">
+      <p>・LPコーディング（HTML / CSS / JavaScript）</p>
+      <p>・レスポンシブ対応（スマホ対応）</p>
+      <p>・既存LPの修正・改善</p>
+    </div>
+  </section>
+
+  <!-- ④実績 -->
+  <section class="works fade">
+    <h2>制作実績</h2>
+    <div class="card">
+      <p>・自己紹介ポートフォリオサイト</p>
+      <p>・プログラミング学習LP</p>
+    </div>
+  </section>
+
+  <!-- ⑤強み -->
+  <section class="strength fade">
+    <h2>選ばれる理由</h2>
+    <div class="card">
+      <p>・技術営業経験による高いヒアリング力</p>
+      <p>・スピード対応（即レス）</p>
+      <p>・柔軟な修正対応</p>
+    </div>
+  </section>
+
+  <!-- ⑥お問い合わせ -->
+  <section class="contact fade" id="contact">
+    <h2>お問い合わせ</h2>
+
+    <form onsubmit="return validateForm()"> <!-- 送信時チェック -->
+
+      <input type="text" id="name" placeholder="お名前"> <!-- 名前 -->
+
+      <input type="email" id="email" placeholder="メールアドレス"> <!-- メール -->
+
+      <textarea id="message" placeholder="お問い合わせ内容"></textarea> <!-- 内容 -->
+
+      <button type="submit">送信</button> <!-- 送信 -->
+
+    </form>
+
+  </section>
+
+  <script src="script.js"></script> <!-- JS -->
+
+</body> <!-- 終了 -->
+</html> <!-- 終了 -->

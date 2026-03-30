@@ -1,0 +1,89 @@
+body { /* 全体 */
+  margin: 0; /* 余白削除 */
+  font-family: Arial, sans-serif; /* フォント */
+}
+
+section { /* 各エリア */
+  padding: 80px 20px; /* 余白 */
+  text-align: center; /* 中央 */
+}
+
+/* ヒーロー */
+.hero {
+  background: linear-gradient(135deg, #007BFF, #00c6ff);
+  color: white;
+}
+
+/* セクション色 */
+.about { background: #ffffff; }
+.service { background: #f5f5f5; }
+.works { background: #ffffff; }
+.strength { background: #f5f5f5; }
+.contact { background: #007BFF; color: white; }
+
+/* カード */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* プロフィール画像 */
+.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* フォーム */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* ボタン */
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* アニメーション */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  h1 { font-size: 22px; }
+}
