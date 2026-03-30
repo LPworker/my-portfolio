@@ -87,3 +87,23 @@ button:hover {
 @media (max-width: 600px) {
   h1 { font-size: 22px; }
 }
+.contact {
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ←これが重要（ズレの原因潰す） */
+.contact input,
+.contact textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 念のため横ズレ防止 */
+body {
+  overflow-x: hidden;
+}
