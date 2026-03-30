@@ -1,26 +1,39 @@
-// スクロール表示
-window.addEventListener("scroll", function() {
+// ページ読み込み時に実行
+window.addEventListener("load", function() { // ページが読み込まれたら
 
-  const elements = document.querySelectorAll(".fade");
+  const first = document.querySelector(".fade"); // 最初のfade要素を取得
 
-  elements.forEach(function(el) {
+  if (first) { // 存在したら
+    first.classList.add("show"); // 最初から表示する
+  }
 
-    const position = el.getBoundingClientRect().top;
+});
 
-    if (position < window.innerHeight - 100) {
-      el.classList.add("show");
+
+// スクロールアニメーション
+window.addEventListener("scroll", function() { // スクロール時
+
+  const elements = document.querySelectorAll(".fade"); // 全fade取得
+
+  elements.forEach(function(el) { // 1つずつ
+
+    const position = el.getBoundingClientRect().top; // 位置取得
+
+    if (position < window.innerHeight - 100) { // 画面内に入ったら
+      el.classList.add("show"); // 表示
     }
 
   });
 
 });
 
-// フォームチェック
-function validateForm() {
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+// フォームチェック
+function validateForm() { // 送信時
+
+  const name = document.getElementById("name").value; // 名前取得
+  const email = document.getElementById("email").value; // メール取得
+  const message = document.getElementById("message").value; // 内容取得
 
   if (name === "") {
     alert("お名前を入力してください");
