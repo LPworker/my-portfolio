@@ -52,12 +52,12 @@ section {
   margin-bottom: 15px;
 }
 
-/* フォーム（←ここが今回の核心） */
+/* フォーム */
 .contact form {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 0 20px; /* ←これで左右完全に揃う */
+  padding: 0 20px;
 }
 
 /* 入力欄 */
@@ -75,10 +75,16 @@ textarea {
   height: 100px;
 }
 
-/* ボタン */
+/* ボタン（←iPhone対策込み） */
 button {
+  -webkit-appearance: none; /* iPhoneの自動デザイン解除 */
+  appearance: none;
+
+  background-color: white;  /* ←これで白に統一 */
+  color: #007BFF;
+
   padding: 15px 30px;
-  border: none;
+  border: 1px solid #007BFF;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
