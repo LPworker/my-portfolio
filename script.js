@@ -53,3 +53,11 @@ function validateForm() { // 送信時
   alert("送信完了しました");
   return true;
 }
+// 最初にアンカーを無視
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  }
+});
