@@ -1,11 +1,18 @@
-body { /* 全体 */
-  margin: 0; /* 余白削除 */
-  font-family: Arial, sans-serif; /* フォント */
+/* 全体 */
+* {
+  box-sizing: border-box; /* ←最重要（ズレ防止） */
 }
 
-section { /* 各エリア */
-  padding: 80px 20px; /* 余白 */
-  text-align: center; /* 中央 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* 横ズレ防止 */
+}
+
+/* 各セクション */
+section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
 /* ヒーロー */
@@ -19,7 +26,10 @@ section { /* 各エリア */
 .service { background: #f5f5f5; }
 .works { background: #ffffff; }
 .strength { background: #f5f5f5; }
-.contact { background: #007BFF; color: white; }
+.contact { 
+  background: #007BFF; 
+  color: white;
+}
 
 /* カード */
 .card {
@@ -40,20 +50,24 @@ section { /* 各エリア */
   margin-bottom: 15px;
 }
 
-/* フォーム */
-form {
+/* フォーム全体 */
+.contact form {
   max-width: 400px;
   margin: 0 auto;
 }
 
-input, textarea {
+/* 入力欄（ズレ完全対策済） */
+input,
+textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   border: none;
+  box-sizing: border-box;
 }
 
+/* テキストエリア */
 textarea {
   height: 100px;
 }
@@ -65,6 +79,12 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+/* ボタン中央寄せ（地味に重要） */
+.contact button {
+  display: block;
+  margin: 20px auto 0;
 }
 
 button:hover {
@@ -86,24 +106,4 @@ button:hover {
 /* スマホ */
 @media (max-width: 600px) {
   h1 { font-size: 22px; }
-}
-.contact {
-  text-align: center;
-}
-
-.contact form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/* ←これが重要（ズレの原因潰す） */
-.contact input,
-.contact textarea {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* 念のため横ズレ防止 */
-body {
-  overflow-x: hidden;
 }
